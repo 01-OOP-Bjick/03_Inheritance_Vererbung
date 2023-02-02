@@ -6,15 +6,13 @@ public class Cat {
   private String furColor;
   private int age; 
 
-  private boolean isFemale;
   private int counter;
 
 
-public Cat(String name, String furColor, int age, boolean isFemale) {
+public Cat(String name, String furColor, int age) {
     this.name = name;
     this.furColor = furColor;
     this.age = age;
-    this.isFemale = isFemale;
   }
 
 public String getStringAttributes(String op) {
@@ -29,21 +27,12 @@ public String getStringAttributes(String op) {
 }
 
 public String getAge() {
-  if (isFemale) {
     return checkEscalationLevel();
-  } else {
-    return String.valueOf(age);
-  }
 }
   
 private String checkEscalationLevel() {
  
   counter++;  // +1
-  
-  // sägezahn ...
- if (counter > 3) {
-  counter = 1;
- } 
 
   switch (counter) {
     case 1:
@@ -55,9 +44,5 @@ private String checkEscalationLevel() {
     default:
       return "1#!?&&%"; 
   }
-  
 }
-
-
-    
 }
